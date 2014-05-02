@@ -10,7 +10,7 @@
 
   function init(){
     $('#add').click(add);
-    $('#opponents').on('click', '.training', train);
+    $('#creatures').on('click', '.training', train);
   }
 
   function train(event){
