@@ -2,19 +2,19 @@ doctype html
 html(lang='en')
   head
     meta(charset='utf-8')
-    title HappiTails
+    title MortalKombat
     link(rel='stylesheet', href='./css/buttons.css')
     link(rel='stylesheet', href='./css/app.css')
   body
     header
-      h1 HappiTails
+      h1 MortalKombat
 
     #controls
       select#species
         option Dragon
-        option Dog
-        option Cat
-        option Sloth
+        option Alien
+        option Predator
+        option Ninja
       select#gender
         option Male
         option Female
@@ -27,11 +27,11 @@ html(lang='en')
       input#age(type='text', placeholder='Age')
       input#photo(type='text', placeholder='Photo')
       button#add Add
-    #animals
+    #creatures
       #dragons
-      #dogs
-      #cats
-      #sloths
+      #aliens
+      #predators
+      #ninjas
 
     script(src='./js/vendor/traceur.js')
     script(src='./js/vendor/experimental.js')
@@ -40,7 +40,7 @@ html(lang='en')
     script(src='./js/vendor/moment-2.6.0.js')
     script(src='./js/es6/utility.js')
     script(src='./js/es6/dragon.js')
-    script(src='./js/es6/dog.js')
-    script(src='./js/es6/cat.js')
-    script(src='./js/es6/sloth.js')
+    script(src='./js/es6/alien.js')
+    script(src='./js/es6/predator.js')
+    script(src='./js/es6/ninja.js')
     script(src='./js/es6/main.js')

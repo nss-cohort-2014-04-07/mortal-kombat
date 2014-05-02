@@ -1,4 +1,4 @@
-/* global Dragon:true, Dog:true, Cat:true, Sloth:true */
+/* global Dragon:true, Alien:true, Predator:true, Ninja:true */
 /* jshint unused:false */
 
 (function(){
@@ -6,11 +6,11 @@
 
   $(document).ready(init);
 
-  let animals = [];
+  let creatures = [];
 
   function init(){
     $('#add').click(add);
-    $('#animals').on('click', '.training', train);
+    $('#opponents').on('click', '.training', train);
   }
 
   function train(event){
@@ -24,36 +24,36 @@
     let gender = $('#gender').val();
     let photo = $('#photo').val() || undefined;
     let weapon = $('#weapon').val();
-    let animal;
+    let creature;
 
     switch(species){
       case 'Dragon':
-        animal = new Dragon(gender, weapon, name, age, photo);
+        creature = new Dragon(gender, weapon, name, age, photo);
         break;
-      case 'Dog':
-        animal = new Dog(gender, weapon, name, age, photo);
+      case 'Alien':
+        creature = new Alien(gender, weapon, name, age, photo);
         break;
-      case 'Cat':
-        animal = new Cat(gender, weapon, name, age, photo);
+      case 'Predator':
+        creature = new Predator(gender, weapon, name, age, photo);
         break;
-      case 'Sloth':
-        animal = new Sloth(gender, weapon, name, age, photo);
+      case 'Ninja':
+        creature = new Ninja(gender, weapon, name, age, photo);
     }
 
-    animals.push(animal);
-    display(animal);
+    creatures.push(creature);
+    display(creature);
   }
 
-  function display(animal){
-    $(`#${animal.species}s`).append(`<div data-id=${animal.id} class=${animal.species}>
-                                       <div class=photo style='background-image:url("${animal.photo}")'></div>
+  function display(creature){
+    $(`#${creature.species}s`).append(`<div data-id=${creature.id} class=${creature.species}>
+                                       <div class=photo style='background-image:url("${creature.photo}")'></div>
                                        <div class=meta>
-                                         <div class=name>name: ${animal.name}</div>
-                                         <div class=age>age: ${animal.age}</div>
-                                         <div class=gender>gender: ${animal.gender}</div>
-                                         <div class=health>health: ${animal.health}%</div>
-                                         <div class=weapon><img src=${animal.weaponImg}></div>
-                                         <div class=damage>damage: ${animal.damage}</div>
+                                         <div class=name>name: ${creature.name}</div>
+                                         <div class=age>age: ${creature.age}</div>
+                                         <div class=gender>gender: ${creature.gender}</div>
+                                         <div class=health>health: ${creature.health}%</div>
+                                         <div class=weapon><img src=${creature.weaponImg}></div>
+                                         <div class=damage>damage: ${creature.damage}</div>
                                        </div>
                                        <div class=action>
                                          <a href=# class='training button button-rounded button-action button-tiny'>T</a>
